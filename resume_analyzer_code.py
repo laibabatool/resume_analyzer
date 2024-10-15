@@ -47,7 +47,7 @@ query_prompt = PromptTemplate.from_template("Extract specific information about 
 chain = info_prompt | llm
 query_chain = query_prompt | llm
 
-st.title("PDF Information Extraction")
+st.title("Resume Analyzer")
 uploaded_file = st.file_uploader("Choose a file")
 
 if st.button('process'):
