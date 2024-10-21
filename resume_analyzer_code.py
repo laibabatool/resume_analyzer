@@ -3,7 +3,7 @@ from langchain.prompts import PromptTemplate
 import PyPDF2
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-GOOGL_API_KEY = st.secrets['GOOGLE_API_KEY']
+GOOGLE_API_KEY = st.secrets['GOOGLE_API_KEY']
 
 llm = ChatGoogleGenerativeAI(model="gemini-pro",google_api_key = GOOGLE_API_KEY)
 
