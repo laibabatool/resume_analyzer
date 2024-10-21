@@ -3,7 +3,9 @@ from langchain.prompts import PromptTemplate
 import PyPDF2
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-llm = ChatGoogleGenerativeAI(model="gemini-pro",google_api_key = "AIzaSyB2d8VnVd4S4PR6J26OV7oWfzaALQQULMI")
+GOOGL_API_KEY = st.secrets['GOOGLE_API_KEY']
+
+llm = ChatGoogleGenerativeAI(model="gemini-pro",google_api_key = GOOGLE_API_KEY)
 
 
 def extract_text_from_pdf(uploaded_file):
