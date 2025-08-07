@@ -7,10 +7,9 @@ import tempfile
 import pandas as pd
 import time
 
-# Load Google API Key from Streamlit secrets
+
 GOOGLE_API_KEY = st.secrets['api_keys']['GOOGLE_API_KEY']
 
-# Initialize Gemini LLM
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", google_api_key=GOOGLE_API_KEY)
 
 # Function to extract text from uploaded PDF
@@ -22,8 +21,6 @@ def extract_text_from_pdf(uploaded_file):
         text += page.extract_text()
     return text
 
-# Prompt templates
-# Prompt templates
 info_prompt = PromptTemplate.from_template("""
         Extract the following information from the resume text:
         1. Full Name
@@ -71,7 +68,6 @@ chain = info_prompt | llm
 query_chain = query_prompt | llm
 ranking_chain = ranking_prompt | llm
 
-# Streamlit UI
 st.title("Resume Analyzer")
 
 tab1, tab2 = st.tabs(["Single Resume Analysis", "Bulk Resume Comparison"])
@@ -128,14 +124,14 @@ with tab2:
                     progress_bar.progress(progress)
 
                     resume_text = extract_text_from_pdf(resume_file)
-                    candidate_name = os.path.splitext(resume_file.name)[0].capitalize()  # e.g., 'ali.pdf' → 'Ali'
+                    candidate_name = os.path.splitext(resume_file.name)[0].capitalize()  
 
                     result = ranking_chain.invoke({
                         "jd_text": jd_text,
                         "resume_text": resume_text
                     })
 
-                    # Respect Gemini's rate limit
+                
                     time.sleep(35)
 
                     reasoning = result.content.replace("Reasoning:", "").strip()
@@ -146,9 +142,8 @@ with tab2:
 
                 progress_bar.empty()
 
-                # Sort based on reasoning quality manually using Gemini (simulate relevance via position)
-                # You can refine this by analyzing keywords later if needed
                 st.subheader("Ranked Candidates (Best to Worst Match)")
                 for i, entry in enumerate(rankings):
                     st.markdown(f"**{i+1}. {entry['Candidate']}** - {entry['Reasoning']}")
+
 
