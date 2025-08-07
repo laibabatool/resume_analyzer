@@ -25,14 +25,6 @@ A powerful **Streamlit-based Resume Analyzer** that leverages **Google Gemini Pr
 
 ---
 
-## 🎥 Demo Video
-
-🎬 **Watch it in action**:
-
-[![Watch the demo]](demo-video.mp4)
-
----
-
 ## 📸 UI Preview
 
 ### 🧍 Single Resume Analysis
@@ -40,8 +32,6 @@ A powerful **Streamlit-based Resume Analyzer** that leverages **Google Gemini Pr
 **Upload Interface:**
 
 ![Single Resume UI](UI%20images/Single%20resume%20UI.PNG)
-
-
 
 ---
 
@@ -51,7 +41,13 @@ A powerful **Streamlit-based Resume Analyzer** that leverages **Google Gemini Pr
 
 ![Bulk Resume UI](UI%20images/Bulk%20resume%20UI.PNG)
 
+---
 
+## 🎥 Demo Video
+
+🎬 **Watch it in action**:
+
+[![Watch the demo]](UI%20images/demo.mp4)
 
 ---
 
