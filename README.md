@@ -49,7 +49,7 @@ A powerful **Streamlit-based Resume Analyzer** that leverages **Google Gemini Pr
 
 **Upload Multiple Resumes + Job Description:**
 
-![Bulk Resume UI](Bulk%20resume%20UI.png)
+![Bulk Resume UI](UI%20images/Bulk%20resume%20UI.PNG)
 
 
 
