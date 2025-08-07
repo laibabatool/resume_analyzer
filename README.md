@@ -39,7 +39,7 @@ A powerful **Streamlit-based Resume Analyzer** that leverages **Google Gemini Pr
 
 **Upload Interface:**
 
-![Single Resume UI](Single%20resume%20UI.png)
+![Single Resume UI](UI%20images/Single%20resume%20UI.PNG)
 
 
 
