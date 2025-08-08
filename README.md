@@ -63,7 +63,7 @@ A powerful **Streamlit-based Resume Analyzer** that leverages **Google Gemini Pr
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 resume-analyzer/
 │
