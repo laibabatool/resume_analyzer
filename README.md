@@ -64,6 +64,7 @@ A powerful **Streamlit-based Resume Analyzer** that leverages **Google Gemini Pr
 ---
 
 ## 📁 Project Structure
+```
 resume-analyzer/
 │
 ├── UI images/ 
@@ -77,33 +78,45 @@ resume-analyzer/
 ├── resume_analyzer.py # Main Streamlit app
 ├── requirements.txt 
 └── README.md
+```
 
 ---
 
 ##  Setup Instructions
 
 ### 1. Clone the Repository
+```bash
 git clone https://github.com/your-username/resume-analyzer.git
-cd resume-analyzer 
+cd resume-analyzer
+```
 
 ### 2. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 3. Set API Keys
-Create a .streamlit/secrets.toml file with your Google Gemini API key
+Create a `.streamlit/secrets.toml` file with your Google Gemini API key:
+```toml
+[api_keys]
+GOOGLE_API_KEY = "your-google-api-key"
+```
 
 ### 4. Run the App
+```bash
 streamlit run resume_analyzer.py
+```
 
+---
 
 ### Example Prompts for Queries
+```
 "What technologies has the candidate worked with?"
 
 "Summarize the candidate's work experience."
 
 "Which project relates to AI?"
+```
 ---
-Pull requests, ideas, and bug reports are welcome!
+Pull requests, ideas, and bug reports are welcome!  
 If you find this useful, give it a ⭐️ and share your feedback!
-
-
